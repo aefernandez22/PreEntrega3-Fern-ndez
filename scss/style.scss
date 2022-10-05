@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+// HEADER
+
+#header {
+    background-color: white;
+    min-height: auto;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    .headerUp{
+        .row {
+            .logo {
+                img {
+                    height: 93px;
+                    width: 98px;
+                    @media all and (max-width: 768px) {
+                        height: 85px;
+                        width: 90px;
+                    }
+                }
+            }
+            .buscador {
+                @media all and (max-width: 768px) {
+                    padding: 0px;
+                }
+                .searchForm {
+                    position: relative;
+                    input {
+                        width: 90%;
+                        height: 50px;
+                        text-align: left;
+                        padding-left: 5px;
+                        border: 2px solid #212e3e;
+                        border-radius: 3px;
+                        font-family: 'Poppins', sans-serif; 
+                        font-size: 14px;
+                        @media all and (max-width: 768px) {
+                            width: 100%;
+                            height: 35px;
+                            font-size: 13px;
+                            border: 2px solid #212e3e;
+                        }
+                    }
+                    button {
+                        width: 70px;
+                        height: 30px;
+                        text-align: center;
+                        background-color: #7db34d;
+                        color: white;
+                        font-family: 'Contrail One', cursive;
+                        font-size: 14px;
+                        border: 2px solid #212e3e;
+                        border-radius: 4px;
+                        position: absolute;
+                        top: 10px;
+                        right: 3rem; 
+                        transition: background-color 0.3s linear 0.2s;
+                        &:hover { 
+                            background-color: #212e3e;
+                        }
+                        @media all and (max-width: 768px) {
+                            width: 50px;
+                            height: 28px;
+                            right: 0.4rem;
+                            top: 3.5px;
+                            padding-top: 1px;
+                            font-size: 13px;
+                            border: 1px solid #212e3e;
+                        }
+                    }
+                }
+            }
+            .myAccount {
+                padding-top: 0.1rem;
+                @media all and (max-width: 768px) {
+                    display: none;
+                }
+                .myAccountBox {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #212e3e;
+                    border-radius: 45px;
+                    margin: auto;
+                    padding-top: 0.6rem;
+                }
+                p {
+                    height: 3px;
+                    font-family: 'Contrail One', cursive;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #212e3e;
+                    padding-top: 0.1rem;
+                    cursor: pointer;
+                }
+                .fa-user-large {
+                    color: #7db34d;
+                }
+            }
+        }
+    }
+    .headerDown {
+        background-color: #212e3e;
+        border-bottom: 1px solid white;
+        height: 46px;
+        margin-top: 3px;
+        .row {
+            .navbar {
+                .navbar-toggler {
+                    border: 1px solid white;
+                    background-color: #7db34d;
+                    span {
+                        font-size: 0.6rem;
+                        margin-bottom: 3px;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &:hover {
+                        background-color: white;
+                        transition: none!important;
+                    }
+                }
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: white;
+                            background-color: #212e3e;
+                            font-weight: 500;
+                            text-decoration: none;
+                            font-family: 'Poppins', sans-serif; 
+                            font-size: 15px;
+                            padding-left: 12px; 
+                            &:hover {
+                                color: #7db34d;
+                            }
+                            @media all and (max-width: 768px) {
+                                font-size: 13px;
+                            } 
+                        } 
+                    }    
+                }
+                @media all and (max-width: 768px) {
+                    height: 43px;
+                }
+            }
+            .carrito {
+                text-align: right;
+                font-size: 14px;
+                cursor: pointer;
+                @media all and (max-width: 768px) {
+                    font-size: 13px;
+                }
+                .fa-cart-shopping {
+                    color: #7db34d;
+                    padding-top: 14px;
+                }
+            }
+        }
+    }
+}
+
+// CARRUSEL
+
+#carrusel {
+    padding-top: 139px;
+    padding-bottom: 4px;  
+    @media all and (max-width: 768px) {
+      padding-top: 172px;
+    }
+}
+
+// CATEGORIAS
+
+#Categories {
+    border-top: 5px solid #212e3e;
+    border-bottom: 5px solid #212e3e;   
+    .boxCategory {
+        height: 66px;
+        padding: 17px 0px;
+        border: 3px solid #212e3e;
+        border-radius: 5px;
+        background-color: #7db34d;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s linear 0.2s;
+        &:hover {
+            background-color: #212e3e;
+        }
+        h4 {
+            margin: auto;
+            font-size: 22px;
+            font-family: 'Contrail One', cursive;
+            @media all and (max-width: 768px) {
+                font-size: 17px;
+            }
+        }
+        @media all and (max-width: 768px) {
+            margin: 5px 0px;
+            padding: 11px 0px;
+            height: 46px;
+        }
+    }
+} 
+
+// BANNER SECUNDARIO
+
+#bannerSecundario {
+    width: 100%;
+    margin: auto;
+    border-top: 4px solid white;
+    .bannerProducts {
+        min-height: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        background-image: url("../Multimedia/bannersecundario.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        button {
+            margin: auto;
+            width: 350px;
+            height: 50px;
+            background-color: #212e3e;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            transition: background-color 0.2s linear 0.2s;
+            &:hover {
+                background-color: #7db34d;
+            }
+            @media all and (max-width: 768px) {
+                width: 180px;
+                height: 64px;
+                border: 2px solid #212e3e;
+                border-radius: 4px;
+            }
+            a {
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                font-weight: 400;
+                font-family: 'Contrail One', cursive;
+                transition: color 0.2s linear 0.2s;
+                @media all and (max-width: 768px) {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER
+
+.footer {
+    width: 100%;
+    border-top: 2px solid #212e3e;
+    margin-bottom: 50px;
+    background-color: white;
+    .row {
+        .footerTitle {
+            font-size: 22px;
+            font-family: 'Contrail One', cursive;
+            @media all and (max-width: 768px) {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            @media all and (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        .news {
+            .form-floating {
+                input {
+                    width: 90%;
+                    height: 40px;
+                    text-align: left;
+                    padding-left: 5px;
+                    border: 2px solid #212e3e;
+                    border-radius: 3px;
+                    position: relative;
+                    font-family: 'Poppins', sans-serif; 
+                    font-size: 14px;
+                    @media all and (max-width: 768px) {
+                        width: 100%;
+                        margin-bottom: 40px;
+                        font-size: 12px;
+                        height: 40px;
+                    }
+                }
+                button {
+                    width: 70px;
+                    height: 30px;
+                    text-align: center;
+                    background-color: #7db34d;
+                    color: white;
+                    font-family: 'Contrail One', cursive;
+                    font-size: 14px;
+                    border: 2px solid #212e3e;
+                    border-radius: 4px;
+                    position: absolute;
+                    bottom: 0.3rem;
+                    right: 2.6rem;
+                    padding-top: 1.5px;
+                    transition: background-color 0.3s linear 0.2s;
+                    &:hover {
+                        background-color: #212e3e;
+                    }
+                    @media all and (max-width: 768px) {
+                        width: 50px;
+                        height: 25px;
+                        font-size: 12px;
+                        border: 1px solid #212e3e;
+                        right: 7px;
+                        bottom: 3rem;
+                    }  
+                }                  
+            }
+        }
+        .redesIcons {
+            text-align: center;
+            @media all and (max-width: 768px) {
+                margin-bottom: 40px;
+            }
+            .fa-facebook, .fa-instagram, .fa-twitter {
+                color: #7db34d;
+            }
+        }
+        .datosFooter {
+            p {
+            color: #7db34d;
+            }
+        }  
+    }
+}
+
+// WHATSAPP
+
+#whatsApp { 
+    a {
+        img {
+            width: 55px;
+            position: fixed;
+            bottom: 24px;
+            right: 20px;
+            @media all and (max-width: 992px) {
+                width: 45px;
+                right: 3px;
+                bottom: 10px
+            }
+        }
+    }
+}  
+  
+// CONTACTO
+
+#contact {
+    padding: 155px 20px 0px 20px;
+    font-family: 'Poppins', sans-serif;
+    @media all and (max-width: 768px) {
+        padding-top: 180px;
+        h1 {
+            font-size: 26px;
+        } 
+    }
+    .contactForm {
+        #inputName, #inputSurname, #emailInput, #inputPass, #inputAdd, #inputAdd2, #inputCity, #inputCode  {
+            @media all and (max-width: 768px) {
+              font-size: 14px;
+            }
+        }
+        .form-label, .form-check {
+            @media all and (max-width: 768px) {
+              font-size: 15px;
+            }
+        }
+        .form-select {
+            @media all and (max-width: 768px) {
+              font-size: 14px!important;
+              .form-select-item {
+                font-size: 13px;
+              }
+            }
+        }
+    }
+    .contactButton {
+        button  {
+            background-color: #7db34d;
+            border: 2px solid #212e3e;
+            font-family: 'Contrail One', cursive;
+            &:hover  {
+                background-color: #212e3e!important;
+                border: 2px solid #212e3e!important;
+            }
+        }
+    }
+}
+
+// QUIENES SOMOS
+
+#whoPage {
+    padding: 140px 20px 0px 20px; 
+    font-family: 'Poppins', sans-serif; 
+    @media all and (max-width: 768px) {
+        padding-top: 155px;
+        .whoPageText {
+            .whoText {
+                font-size: 14px;
+            }
+            .whoTitle {
+                font-size: 17px;
+            }
+        } 
+        .whoPageVideo {
+            iframe {
+                width: 100%;
+                min-height: auto;
+            }    
+        }
+    }
+}
+  
+// FAQ
+
+#FAQ {
+    padding: 140px 20px 0px 20px;
+    font-family: 'Poppins', sans-serif;
+    @media all and (max-width: 768px) {
+        padding-top: 155px; 
+    }    
+    .FaqPageText {
+        margin-bottom: 100px;
+        @media all and (max-width: 768px) {
+            .faqText {
+              font-size: 14px;
+            }
+            .faqTitle {
+              font-size: 17px;
+            }
+            img {
+              width: 55px;
+              height: 36px;
+            }
+        }
+    } 
+}
+
+// PRODUCTOS 
+
+#productPage {
+    padding: 140px 20px 0px 20px;
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        @media all and (max-width: 768px) {
+            font-size: 26px;
+        }
+    }
+    @media all and (max-width: 768px) {
+        padding-top: 180px; 
+    }
+}
+  
+#productsGrid {
+    margin-bottom: 100px;
+    font-family: 'Poppins', sans-serif;
+    .row {
+        .productItem {
+            h3 {
+            font-size: 18px;
+            @media all and (max-width: 768px) {
+                font-size: 14px;
+            }
+            }
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                color: #7db34d;
+                @media all and (max-width: 768px) {
+                    font-size: 17px;
+                }
+            }
+            img {
+                width: 300px;
+                height: 300px;
+                @media all and (max-width: 768px) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
